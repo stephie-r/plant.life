@@ -1,0 +1,368 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* NOTAS
+
+      font-family: 'Bad Script', cursive;
+
+      font-family: 'Open Sans', sans-serif;
+*/
+
+/**reglas de estilo genericas**/
+
+h1{
+    font-family: 'Bad Script', cursive;
+    color: rgb(12, 12, 12); 
+    font-size: 40px;
+}
+
+h2{
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #fa7268c7; 
+    font-size: 22px;
+}
+
+h3{
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(87, 87, 87);
+    letter-spacing: 8px;
+    font-size: 18px;
+}
+
+h4{
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 15px;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 13px;
+}
+
+h5{
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 10px;
+}
+
+h6{
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(100, 100, 100);
+    font-size: 8px;
+}
+
+
+/**index.html**/
+
+.grid_container{
+    background-image: url(../imagenes/backgrounds/augustine-wong-T0BYurbDK_M-unsplash.jpg);
+    display: grid;
+    grid-template-areas: 
+    "menu menu menu menu menu"
+    "content content content content content"
+    "columnas columnas columnas columnas columnas"
+    "pie pie pie pie pie";
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 700px 900px 500px;
+}
+
+
+header{
+    overflow: hidden;
+    }
+
+
+nav{
+    width:100%;
+}
+
+
+.head{
+    display: flex;
+    position: -webkit-sticky;
+    position: fixed; top: 0%;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(55, 83, 64, 0.37);
+    margin-bottom: 1%;
+    background-blend-mode: overlay;
+
+}
+
+.head img{
+    float: left;
+    padding: 0px;
+    margin-left: 16%;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+.head ul{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 30%;
+    font-size: 14px;
+}
+
+.head li{
+    display: inline-block;
+    margin-top: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.head a{
+    text-decoration: none;
+    width: 89px;
+    font-family:'Open Sans', sans-serif,;
+    color:#f1f1f1;
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    margin: 1%;
+}
+
+.head a:hover{
+    text-decoration: none;
+    width: 89px;
+    font-family:'Open Sans', sans-serif,;
+    color:#f1f1f1;
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #092404e7;
+    margin: 1%;
+    
+ }
+.CTA{
+    grid-area: content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding:0% 6%;
+    margin: 2% 0%;
+
+}
+.CTA img{
+    position:relative;
+    display: flex;
+    height: 100%;
+    margin: 0% 0.75% 0% 0%;
+        
+    }
+
+.CTA_box{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: auto;
+    text-align: center;
+}
+
+
+
+.CTA_box h1 {
+  padding: 0% 0% 5% 0%;
+}
+
+.CTA_box h4 {
+    text-align: center;
+    margin: 0% 18%;
+    justify-items: center;
+}
+
+.CTA__box_1{
+    margin: 15% 0% 0% 0%;
+    min-width: 100px;
+    min-height: 42px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    background: #f3aaa52f;
+    border-radius: 1000px;
+    outline: none;  
+    width: 150px;
+    border: 2px;
+    border-style: solid;
+    border-color: #fa7268;
+    font-size: 11px;
+    transition: background-color 0.8s ease-out;
+}
+.CTA__box_1:hover {
+    min-width: 100px;
+    min-height: 42px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    background: #fa7268;    
+    border-radius: 1000px;
+    outline: none;
+    border: 2px;
+    border-style: solid;
+    border-color: #fa7268;
+    color: #f1f1f1;
+    font-size: 10px;
+    cursor:pointer
+    
+}
+
+
+.img_info{
+    padding: 1% 6%; 
+    grid-area: columnas;
+
+}
+.img_info section{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.5fr 2fr;
+    column-gap: 5%;
+}
+.img_info section h2{
+    grid-area:1/1/1/3;
+    padding: 4% 25% 0% 5%;
+}
+.img_info section article{
+    text-align: center;
+    grid-row: 2 / 3;
+    padding: 2% 15%;
+}
+
+
+.img_info section h3{
+    padding: 10px;
+    margin: 4%;
+    }
+    .img_info section p{
+        margin: 2% 0%;
+        }
+    
+
+.img_info section button{
+    padding: 10px ;
+    border-radius: 100px;
+    margin: 4%;
+}
+
+
+.footer{
+    grid-area: pie;
+    padding:3% 6%; 
+}
+
+/*Tips.html estilo*/
+.body_tips{
+    background-image: url(../imagenes/backgrounds/augustine-wong-T0BYurbDK_M-unsplash.jpg);
+}
+.grid_vid{
+    margin: 10% 20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.grid_vid h2{ 
+    width: 25%;
+    align-self: flex-start;
+   
+}
+.vid_plantines{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 1%;
+    align-self: center;
+}
+.vid_plantines__1{
+    margin: 2.5% 4%;
+}
+.vid_plantines__2{
+    margin: 2.5% 4%;
+}
+.vid_plantines__3{
+    margin: 2.5% 4%;
+}
+.vid_plantines__4{
+    margin: 2.5% 4%;
+}
+.vid_plantines iframe{
+    border-radius: 20px;
+}
+
+/*aboutus.html*/
+
+.background{
+    background-size: cover;
+    background-image: url(..//imagenes/backgrounds/pawel-czerwinski-qzaIDFtzcZ0-unsplash.jpg);
+    background-blend-mode: multiply;
+    padding-top: 140px;
+    padding-bottom: 260px;
+}
+
+.background__center_info { 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+
+}
+.background__center_info p {
+    font-family:'Open Sans ', sans-serif;
+    max-width: 20%;
+    font-style: normal;
+    text-align: justify;
+    color: #272727;
+
+}
+.table_team{
+    width: 50%;
+    padding: 5% 0%;
+    margin-left: 25% ;
+   
+}
+.table_team h2{ 
+    letter-spacing: 8px;
+    font-size: 20px;
+    color: #676666;
+    padding: 3px 0px 3% 3%;
+    font-weight: 200;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+.table_team ol{
+    display: block;
+    margin-left: -100%; 
+    list-style: none;
+}
+.table_team h4{
+    display: inline-flexbox;
+    width: 80%;
+    text-align: left;
+    color: #fa7268;
+    margin-left: -100%;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+.table_team img{
+    display: block;
+    padding: 2%;
+}
