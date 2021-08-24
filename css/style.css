@@ -104,7 +104,31 @@ nav{
     margin-left: 16%;
     margin-top: 15px;
     cursor: pointer;
+    animation-name: anima_logo;
+    animation-iteration-count: infinite;
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
 
+}
+
+@keyframes anima_logo{
+    0% { 
+
+    }
+    25%{
+        transform: translate(20px);
+    }
+    50% { 
+        transform: translate(-10px);
+
+    }
+    75% {
+        transform: translate(20px);
+    }
+    100%{
+        transform: translate(-10px);
+    }
 }
 
 .head ul{
@@ -142,7 +166,8 @@ nav{
     padding: 10px 15px;
     text-align: center;
     border-radius: 100px;
-    background-color: #092404e7;
+    background-color: #63d4705d;
+background-image: linear-gradient(315deg, #63d4707c 0%, #23332996 74%);
     margin: 1%;
     
  }
