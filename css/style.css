@@ -92,7 +92,7 @@ nav{
     position: fixed; top: 0%;
     height: 80px;
     width: 100%;
-    background-color: rgba(55, 83, 64, 0.37);
+    background-image: linear-gradient(180deg, #4d6d428a 95%, #ff8c8400 100%);
     margin-bottom: 1%;
     background-blend-mode: overlay;
 
@@ -104,31 +104,35 @@ nav{
     margin-left: 16%;
     margin-top: 15px;
     cursor: pointer;
-    animation-name: anima_logo;
-    animation-iteration-count: infinite;
-    animation-duration: 900ms;
-    animation-timing-function: ease-in-out;
-    animation-delay: 2s;
 
 }
 
-@keyframes anima_logo{
-    0% { 
+.head img:hover{
+    float: left;
+    padding: 0px;
+    margin-left: 16%;
+    margin-top: 15px;
+    cursor: pointer;
+    animation-name: animate__pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 1250ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0ms;
+    animation-timing-function:ease-in-out
 
-    }
-    25%{
-        transform: translate(20px);
-    }
-    50% { 
-        transform: translate(-10px);
+}
 
-    }
-    75% {
-        transform: translate(20px);
-    }
-    100%{
-        transform: translate(-10px);
-    }
+@keyframes animate__pulse{
+ 
+        0% {
+         transform:scaleX(1);
+        }
+        50% {
+         transform:scale3d(1.05,1.05,1.05);
+        }
+        to {
+         transform:scaleX(1);
+       }
 }
 
 .head ul{
@@ -166,8 +170,7 @@ nav{
     padding: 10px 15px;
     text-align: center;
     border-radius: 100px;
-    background-color: #63d4705d;
-background-image: linear-gradient(315deg, #63d4707c 0%, #23332996 74%);
+    background-color: #15361967;
     margin: 1%;
     
  }
@@ -187,8 +190,7 @@ background-image: linear-gradient(315deg, #63d4707c 0%, #23332996 74%);
     position:relative;
     display: flex;
     height: 100%;
-    margin: 0% 0.75% 0% 0%;
-        
+    margin: 0% 0.75% 0% 0%;   
     }
 
 .CTA_box{
